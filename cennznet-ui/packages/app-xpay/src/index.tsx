@@ -17,7 +17,7 @@ import Shop from './Shop';
 import Merchant from './Merchant';
 import Lunch_Diner from './Lunch_Diner';
 import Query_param from './Query_param';
-import belanja from './static/belanja.png';
+var belanja = require('./static/belanja.png');
 // define out internal types
 type Props = AppProps & I18nProps;
 type State = {

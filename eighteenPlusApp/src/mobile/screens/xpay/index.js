@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import haptic from 'react-native-haptic-feedback';
-import exceptionsHandlerRegister from './utils/exceptionHandler';
-import HomeNavigator from './mobile/navigator';
-import { createApi } from './utils/cennnznet';
-import store from './store';
+import { connect } from 'react-redux';
+import actionTypes from '../../../actions';
+import Xpay from 'app-xpay';
 
-exceptionsHandlerRegister();
-haptic.trigger();
-createApi();
+const mapDispatchToState = dispatch => ({
+  onIssueClaim: () => dispatch({
+    type: actionTypes.addClaim.requested,
+    payload: { loading: { status: true, title: 'Claiming' } }
+  }),
+  onDocTypeChanged: topic => dispatch({ 
+    type: actionTypes.documentType.changed,
+    payload: { topic }
+  }),
+});
 
-export default class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <HomeNavigator />
-      </Provider>
-    );
-  }
-}
+const mapPropsToState = ({ issuer }) => ({
+  accountId: issuer.selectedClaim.holder,
+  loading: issuer.loading
+});
+
+export default connect(mapPropsToState, mapDispatchToState)(Xpay);

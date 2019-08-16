@@ -1,0 +1,6 @@
+{
+  "plugins": [["import-static-files",{
+    "baseDir":"/src",
+    "extensions": [".jpg", ".png",".css"]
+  }]]
+}

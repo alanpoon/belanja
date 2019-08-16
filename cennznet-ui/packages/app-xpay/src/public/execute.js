@@ -1,12 +1,12 @@
 import $ from "jquery"
 require("./d3.v2.min.js");
 const d3 = window.d3;
-require("./d3-floorplan/src/floorplan");
-require("./d3-floorplan/src/heatmap");
-require("./d3-floorplan/src/imagelayer");
-require("./d3-floorplan/src/overlays");
-require("./d3-floorplan/src/pathplot");
-require("./d3-floorplan/src/vectorfield");
+require("./d3-floorplan/floorplan");
+require("./d3-floorplan/heatmap");
+require("./d3-floorplan/imagelayer");
+require("./d3-floorplan/overlays");
+require("./d3-floorplan/pathplot");
+require("./d3-floorplan/vectorfield");
 import gentleman_image from "../static/magician.svg";
 import lady_image from "../static/lady.svg";
 function makeSVG(tag, attrs) {

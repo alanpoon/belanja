@@ -25,7 +25,7 @@ import ClaimsScreen from '../screens/claims';
 import ClaimDetailsScreen from '../screens/claimDetails';
 import ScanQRCodeScreen from '../screens/scan-qrcode';
 import AddClaimScreen from '../screens/addClaim';
-
+import XpayScreen from '../screens/xpay';
 // issuer
 const IssuerStack = createStackNavigator({
   Claims: { screen: ClaimsScreen },
@@ -55,12 +55,15 @@ const ScanQRCodeStack = createStackNavigator({
 const AddClaimStack = createStackNavigator({
   AddClaim:  { screen: AddClaimScreen }
 });
-
+const XpayStack  =createStackNavigator({
+  Xpay: { screen: XpayScreen}
+})
 const HomeNavigator = createStackNavigator(
   {
     Home: { screen: homeStack },
     QRScanner: { screen: ScanQRCodeStack },
-    AddClaim: { screen: AddClaimStack }
+    AddClaim: { screen: AddClaimStack },
+    Xpay: {screen: XpayStack}
   },
   {
     initialRouteName: 'Home',

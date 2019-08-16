@@ -1,9 +1,9 @@
-import bottle from './static/bottle.png';
-import cup from './static/cup.png';
-import mug from './static/mug.png';
-import honey from './static/honey.png';
-import hoodie from './static/hoodie.png';
-import phone from './static/phone.png';
+var bottle =require('./static/bottle.png');
+var cup =require('./static/cup.png');
+var mug =require('./static/mug.png');
+var honey =require('./static/honey.png');
+var hoodie =require('./static/hoodie.png');
+var phone =require('./static/phone.png');
 
 const items = [
   {

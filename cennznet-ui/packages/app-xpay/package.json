@@ -1,17 +1,30 @@
 {
-  "name": "@polkadot/app-xpay",
+  "name": "app-xpay",
   "version": "0.33.0-beta.38",
   "description": "A basic app that shows the ropes on customisation",
-  "main": "index.js",
   "scripts": {},
-  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "main": "src/index.tsx",
+  "author": "alan Poon <brightshadowx@gmail.com>",
   "maintainers": [
-    "Jaco Greeff <jacogr@gmail.com>"
+    "Alan Poon <brightshadowx@gmail.com>"
   ],
   "license": "Apache-2.0",
   "dependencies": {
     "@babel/runtime": "^7.4.4",
     "@cennznet/crml-generic-asset": "^0.9.0",
-    "@polkadot/ui-app": "^0.33.0-beta.38"
+    "@polkadot/ui-app": "^0.33.0-beta.38",
+    "@polkadot/ui-params": "^0.33.0-beta.38",
+    "@polkadot/ui-reactive": "^0.33.0-beta.38",
+    "@polkadot/ui-signer": "^0.33.0-beta.38",
+    "@polkadot/util": "^0.90.0-beta.2",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "@cennznet/util": "^0.13.6",
+    "@plugnet/types": "^0.78.100"
+  },
+  "rnpm":{
+    "assets": [
+      "./src/public/"
+    ]
   }
 }

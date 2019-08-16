@@ -14,24 +14,23 @@
  * limitations under the License.
  */
 
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import haptic from 'react-native-haptic-feedback';
-import exceptionsHandlerRegister from './utils/exceptionHandler';
-import HomeNavigator from './mobile/navigator';
-import { createApi } from './utils/cennnznet';
-import store from './store';
+import Styled from 'styled-components';
 
-exceptionsHandlerRegister();
-haptic.trigger();
-createApi();
+export const Container = Styled.SafeAreaView`
+  flex: 1;
+  justify-content: space-between;
+  margin: 20px 30px;
+  margin-bottom: 50px;
+`;
 
-export default class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <HomeNavigator />
-      </Provider>
-    );
-  }
-}
+export const ContentContainer = Styled.View`
+`;
+
+export const TypeContainer = Styled.TouchableOpacity`
+  justify-content: center;
+`;
+
+export const TypeText = Styled.Text`
+  font-size: 22px;
+  color: ${p => p.light ? '#d3d3d3' : '#5d5d5d' }
+`;

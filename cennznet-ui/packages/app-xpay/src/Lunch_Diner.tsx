@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { withCalls } from '@polkadot/ui-api/with';
 import execute from './use';
-import './public/d3-floorplan/d3.floorplan.css';
-import Floorplan from './static/Sample_Floorplan.jpg';
+require('./public/d3-floorplan/d3.floorplan.css');
+var Floorplan =require('./static/Sample_Floorplan.jpg');
 import $ from 'jquery';
 type Props = {
 

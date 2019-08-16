@@ -15,7 +15,7 @@
  */
 
 const network = {
-  url: 'wss://rimu.unfrastructure.io/public/ws',
+  url: 'wss://localhost:9944',
   type: 'Rimu'
 };
 
