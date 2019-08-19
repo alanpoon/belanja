@@ -1,1 +1,1 @@
-cd ../belanja_test/MyAwesomeProject && adb reverse tcp:8081 tcp:8081 && react-native run-android
+cd eighteenPlusApp && adb reverse tcp:8081 tcp:8081 && react-native run-android

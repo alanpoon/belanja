@@ -25,7 +25,7 @@ import ClaimsScreen from '../screens/claims';
 import ClaimDetailsScreen from '../screens/claimDetails';
 import ScanQRCodeScreen from '../screens/scan-qrcode';
 import AddClaimScreen from '../screens/addClaim';
-import XpayScreen from '../screens/xpay';
+import LunchDinerScreen from '../screens/belanja/lunch_diner';
 // issuer
 const IssuerStack = createStackNavigator({
   Claims: { screen: ClaimsScreen },
@@ -37,6 +37,7 @@ const homeStack = createBottomTabNavigator(
   tabBarNavigatorConfig([
     { issuer: { screen: IssuerStack, icon: 'cards-outline' } },
     { '18+': { screen: VerifyScreen, icon: 'account-check' } },
+    { 'lunch-diner': { screen: LunchDinerScreen, icon: 'account-check' } },
   ]),
   {
     tabBarOptions: {
@@ -55,15 +56,15 @@ const ScanQRCodeStack = createStackNavigator({
 const AddClaimStack = createStackNavigator({
   AddClaim:  { screen: AddClaimScreen }
 });
-const XpayStack  =createStackNavigator({
-  Xpay: { screen: XpayScreen}
+const LunchDinerStack  =createStackNavigator({
+  LunchDiner: { screen: LunchDinerScreen}
 })
 const HomeNavigator = createStackNavigator(
   {
     Home: { screen: homeStack },
     QRScanner: { screen: ScanQRCodeStack },
     AddClaim: { screen: AddClaimStack },
-    Xpay: {screen: XpayStack}
+    LunchDiner: {screen: LunchDinerStack}
   },
   {
     initialRouteName: 'Home',

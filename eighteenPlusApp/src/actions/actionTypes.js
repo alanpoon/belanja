@@ -36,6 +36,7 @@ const actionTypes = {
   qrcode: changedActionTypes('qrcode'),
   storeClaims: apiActionTypes('store claims'),
   restoreClaims: apiActionTypes('restore claims'),
+  nextItemId: apiActionTypes('xpay next item id'),
 };
 
 export default actionTypes;
